@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Logo from './Logo';
 import Card from './Card';
+import Button from './Button'
 
 
 let data = [
@@ -65,11 +66,10 @@ const App = (props) => {
       <main style={{
         margin: '20px auto',
         width: '100%',
-        maxWidth: '960px'
+        maxWidth: '960px',
+        padding: '20px 20px'
       }}>
-        <div className="ui link cards">
-          {printCards()}
-        </div>
+        <Button>Save</Button>
       </main>
       );
     </>
