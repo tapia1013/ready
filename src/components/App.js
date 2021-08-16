@@ -33,7 +33,8 @@ let data = [
 ]
 
 
-const App = () => {
+const App = (props) => {
+
 
   // const printCards = () => {
   //   let items = [];
@@ -55,9 +56,9 @@ const App = () => {
       <Header background='black'>
         <Logo>Riah</Logo>
         <nav>
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact</a>
+          <a href="/">Home</a>
+          <a href="/">About Us</a>
+          <a href="/">Contact</a>
         </nav>
       </Header>
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-export default function (props) {
+const Header = (props) => {
   return (
     <header style={{
       background: props.background,
@@ -17,5 +17,5 @@ export default function (props) {
 
 
 
-
+export default Header;
 

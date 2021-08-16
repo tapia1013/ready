@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-export default function (props) {
+const Logo = (props) => {
   return (
     <div className="logo" style={{ fontSize: '1.5rem', color: 'white', fontWeight: '700' }}>
       {props.children}
@@ -11,5 +11,5 @@ export default function (props) {
 }
 
 
-
+export default Logo;
 
