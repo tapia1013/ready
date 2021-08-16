@@ -82,7 +82,3 @@ export default App;
 
 
 
-
-// video 10: how to remove errors
-
-
