@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './Header';
 import Logo from './Logo';
-import Card from './Card';
-import Button from './Button'
+import Counter from './counter/Counter';
+
 
 
 let data = [
@@ -37,21 +37,6 @@ let data = [
 const App = (props) => {
 
 
-  // const printCards = () => {
-  //   let items = [];
-  //   for (let i = 0; i < data.length; i++) {
-  //     items.push(<Card userData={data[i]} />)
-  //   }
-  //   return items;
-  // }
-
-  const printCards = () => {
-    return data.map((item, index) => {
-      return <Card key={index} userData={item} />
-    })
-  }
-
-
   return (
     <>
       <Header background='black'>
@@ -69,7 +54,7 @@ const App = (props) => {
         maxWidth: '960px',
         padding: '20px 20px'
       }}>
-        <Button>Save</Button>
+        <Counter />
       </main>
       );
     </>
