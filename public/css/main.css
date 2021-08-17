@@ -37,3 +37,14 @@
 
 
 
+
+form .error-message {
+  color: red;
+  display: none;
+}
+
+form .error-message.show {
+  display: block;
+}
+
+
