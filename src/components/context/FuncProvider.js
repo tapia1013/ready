@@ -14,6 +14,8 @@ export function GlobalStateProvider({ children }) {
       ...newState,
       state: {
         name: e.target.value,
+        dog: 'Cookie',
+        breed: 'Smelly'
       }
     }
     )
@@ -47,10 +49,35 @@ export function GlobalStateProvider({ children }) {
 
 
 
+// import React, { useContext, useState } from react;
+
+// export function useStateContext() {
+//   return useContext(StateContext)
+// }
 
 
+// export const StateContext = React.createContext({
+//   state: {
+//     name: 'vee'
+//   }
+// });
 
 
+// export function GlobalStateProvider({children}) {
+//   const handleChange = (e) => {
+//     setNewState({
+//       ...newState,
+//       state: {
+//         name: e.target.value
+//       }
+//     })
+//   }
 
-
+//   const [newState, setNewState] = useState()
+//   return(
+//     <StateContext.Provider value={newState}>
+//       {children}
+//     </StateContext.Provider>
+//   )
+// }
 

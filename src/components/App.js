@@ -11,6 +11,7 @@ import A from './context/A';
 import B from './context/B';
 import C from './context/C';
 import D from './context/D';
+import E from './context/E';
 
 
 let data = [
@@ -43,7 +44,7 @@ let data = [
 
 
 
-// IMPORT STATECONTEXT.CONSUMER IS ONLY FOR CLASS COMPONENTS
+// IMPORT STATECONTEXT.CONSUMER ONLY FOR THIS COMPONENT YOU DONT NEED IT FOR THE OTHERS ONLY 1 MAIN ONE.
 
 
 const App = (props) => {
@@ -83,7 +84,9 @@ const App = (props) => {
                   <A>
                     <B>
                       <C>
-                        <D></D>
+                        <D>
+                          <E></E>
+                        </D>
                       </C>
                     </B>
                   </A>
