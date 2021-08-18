@@ -2,7 +2,11 @@ import React from 'react';
 import Header from './Header';
 import Logo from './Logo';
 import Counter from './counter/Counter';
-import Form from './form/Form'
+import Form from './form/Form';
+import { GlobalStateProvider, StateContext } from './context/ClassProvider';
+import A from './context/A';
+import B from './context/B';
+import C from './context/C';
 
 
 
@@ -39,27 +43,48 @@ const App = (props) => {
 
 
   return (
-    <>
-      <Header background='black'>
-        <Logo>Riah</Logo>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/">About Us</a>
-          <a href="/">Contact</a>
-        </nav>
-      </Header>
+    <GlobalStateProvider>
+      <StateContext.Consumer>
+        {
+          context => {
+            console.log(context);
+            return (
+              <>
+                <Header background='black'>
+                  <Logo>Riah</Logo>
+                  <nav>
+                    <a href="/">Home</a>
+                    <a href="/">About Us</a>
+                    <a href="/">Contact</a>
+                  </nav>
+                </Header>
 
-      <main style={{
-        margin: '20px auto',
-        width: '100%',
-        maxWidth: '960px',
-        padding: '20px 20px'
-      }}>
-        {/* <Counter /> */}
-        <Form />
-      </main>
-      );
-    </>
+                <main style={{
+                  margin: '20px auto',
+                  width: '100%',
+                  maxWidth: '960px',
+                  padding: '20px 20px'
+                }}>
+                  <input
+                    type="text"
+                    value={context.state.name}
+                    onChange={context.handleChange}
+                  />
+                  {/* <Counter /> */}
+                  {/* <Form /> */}
+                  <h1>Name: {context.state.name}</h1>
+                  <A>
+                    <B>
+                      <C></C>
+                    </B>
+                  </A>
+                </main>
+              </>
+            )
+          }
+        }
+      </StateContext.Consumer>
+    </GlobalStateProvider>
   )
 }
 
