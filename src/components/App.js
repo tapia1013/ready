@@ -3,11 +3,14 @@ import Header from './Header';
 import Logo from './Logo';
 import Counter from './counter/Counter';
 import Form from './form/Form';
-import { GlobalStateProvider, StateContext } from './context/ClassProvider';
+// class provider
+// import { GlobalStateProvider, StateContext } from './context/ClassProvider';
+// hook function provider
+import { GlobalStateProvider, StateContext } from './context/FuncProvider';
 import A from './context/A';
 import B from './context/B';
 import C from './context/C';
-
+import D from './context/D';
 
 
 let data = [
@@ -37,6 +40,10 @@ let data = [
     imageUrl: 'https://assets2.rappler.com/CDAAB22C51BF47FCA6BEB82ACA5B5F4C/img/F882B9066C7F48719F23390208C02FB6/finding-dory-baby-001.jpg'
   }
 ]
+
+
+
+// IMPORT STATECONTEXT.CONSUMER IS ONLY FOR CLASS COMPONENTS
 
 
 const App = (props) => {
@@ -75,7 +82,9 @@ const App = (props) => {
                   <h1>Name: {context.state.name}</h1>
                   <A>
                     <B>
-                      <C></C>
+                      <C>
+                        <D></D>
+                      </C>
                     </B>
                   </A>
                 </main>

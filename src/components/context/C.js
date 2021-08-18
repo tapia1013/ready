@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { StateContext } from './ClassProvider';
+// import { StateContext } from './ClassProvider';
+import { StateContext } from './FuncProvider';
 
+
+// IMPORT STATECONTEXT.CONSUMER IS ONLY FOR CLASS COMPONENTS
 
 
 class C extends Component {
